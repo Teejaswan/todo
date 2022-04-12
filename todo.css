@@ -202,7 +202,6 @@ label {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
 }
-
 .check:checked::before {
   transform: scale(1);
 }
