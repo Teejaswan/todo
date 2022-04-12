@@ -1,0 +1,224 @@
+.titleBox {
+  border: 2px solid rgba(22, 4, 4);
+  width: 50%;
+  height: 120px;
+  margin: 40px auto 40px auto;
+  border-radius: 25px;
+  box-shadow: 10px 10px rgba(0, 0, 0);
+  transition: 250ms;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.titleBox:hover {
+  transform: translateY(-10px);
+}
+.title {
+  display: block;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: rgb(247, 247, 247);
+}
+body {
+  height: 100%;
+  background: linear-gradient(rgb(73, 255, 246), rgba(3, 34, 32, 0.75));
+}
+.onhover {
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  text-align: center;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hoverbox {
+  display: none;
+  border: 2px solid rgba(22, 4, 4);
+  width: 50%;
+  height: 50px;
+  margin-top: 500px;
+  border-radius: 25px;
+  box-shadow: -10px 10px rgb(0, 0, 0);
+  transition: 250ms;
+  background-color: rgb(232, 255, 26);
+  margin: 80px 2px 0px 100px;
+}
+.titleBox:hover + .hoverbox {
+  display: block;
+}
+.taskbox {
+  display: flex;
+}
+.container {
+  background-color: rgb(245, 159, 219);
+  width: 65%;
+  height: auto;
+  margin: 100px auto 100px auto;
+  border-radius: 25px;
+  border: 2px solid black;
+  box-shadow: 10px 10px rgba(0, 0, 0);
+}
+.taskbox {
+  height: 100px;
+}
+.taskbox input {
+  width: 60%;
+  height: 40%;
+  box-shadow: -2px 4px rgb(0, 0, 0);
+  margin: 60px auto 50px 10px;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+.inputbox {
+  padding-left: 25px;
+  font-size: 20px;
+}
+.gg-list {
+  background-color: rgb(73, 255, 246);
+  padding: 10px 10px 10px 10px;
+  margin: 70px 10px 10px auto;
+  border-width: 3px;
+  font-weight: 5px;
+}
+.filters {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  width: 80%;
+  margin: 10% 5.5%;
+  padding: 18px 25px;
+  height: 100%;
+  background-color: rgb(165, 245, 16);
+  border: 2px solid black;
+  border-radius: 25px;
+  font-weight: 520;
+  box-shadow: 2.5px 4px black;
+}
+.filters span {
+  cursor: pointer;
+  font-size: 12x;
+  color: #000000;
+  font-weight: 600;
+  text-shadow: 5px 5px #ff1f8f;
+  margin: auto;
+}
+.filters span:hover {
+  font-size: 18px;
+  text-shadow: 5px 5px #1fffff;
+  font-weight: 550;
+  padding-bottom: 1px;
+  border-bottom: 3px solid rgb(14, 255, 255);
+}
+
+.button,
+.buttond {
+  background-color: rgb(73, 255, 246);
+  border: 2px solid #111;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px rgba(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 30px;
+  transition: transform 50ms ease-out;
+  text-align: center;
+  font-weight: 500;
+  margin: auto;
+}
+
+.button:active {
+  background-color: rgb(10, 56, 54);
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+}
+
+.buttond {
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: rgb(232, 255, 26);
+}
+.buttond:active {
+  background-color: rgb(106, 117, 4);
+  outline: 0;
+}
+
+.buttond:hover {
+  transform: translate(-2px, -2px);
+}
+
+.tasks li,
+label {
+  display: flex;
+}
+.task {
+  display: flex;
+  box-shadow: 0 2px rgb(243, 240, 38), 0 4px black;
+
+  height: 10%;
+  width: 90%;
+  margin: 5% 5%;
+  padding: 5px;
+}
+
+.options {
+  margin-left: auto;
+
+  padding-right: 60px;
+  padding-top: 18px;
+  padding-bottom: 40px;
+}
+.task input {
+  margin-top: 27px;
+}
+.task p {
+  font-family: cursive;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+}
+.task:last-child {
+  margin-bottom: 60px;
+  box-shadow: none;
+}
+.check {
+  appearance: none;
+  background-color: white;
+  margin: 0;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.check::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+.check:checked::before {
+  transform: scale(1);
+}
+.check::before {
+  background-color: #fbff22;
+}
+#clear {
+  height: 60%;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  background-color: #ff1f8f;
+
+  color: white;
+}
+#clear:active {
+  background-color: beige;
+}
