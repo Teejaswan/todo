@@ -2,6 +2,7 @@
 <html lang="en">
   <head >
     
+    <script type="text/javascript" src="todo.js"></script>
     <link href="https://css.gg/css?=|list" rel="stylesheet" />
     <link rel="stylesheet" href="todo.css" />
     <meta charset="UTF-8" />
@@ -23,7 +24,7 @@
     <div class="container">
       <div class="taskbox">
         <i class="gg-list" style="font-size:60px;"></i>
-        <input id="inputbox" type="text" placeholder="Add a task..." />
+        <input id="inputbox" type="text" placeholder="Add a task..." onkeydown="onenter()"/>
         <input type="hidden" id="index" />
         <input type="submit" onclick="onadd()" id="add" value="ADD!" />
         <input
@@ -40,6 +41,5 @@
       </div>
       <div id="tasks"></div>
     </div>
-    <script type="text/javascript" src="todo.js"></script>
   </body>
 </html>
