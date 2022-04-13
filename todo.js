@@ -80,12 +80,11 @@ function Checkbox(i) {
 
 // Add or Save on enter key press
 
-const $ = (selector) => document.querySelector(selector);
-
-$("#inputbox").onkeydown = ({ key }) => {
+function onenter({ key }) {
+  let $ = (selector) => document.querySelector(selector);
   if (key == "Enter") {
     if ($("#add").style.getPropertyValue("display") == "block")
       $("#add").click();
     else $("#save").click();
   }
-};
+}
