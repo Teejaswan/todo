@@ -1,26 +1,29 @@
+const $ = (id) => document.getElementById(id);
+
 function onadd() {
-  let newtask = document.getElementById("inputbox").value;
+  let newtask = $("inputbox").value;
   console.log(newtask);
-  if (newtask == "") {
-    alert("Please enter a task!");
-  } else {
-    let taskarr = JSON.parse(localStorage.getItem("taskname"));
-    if (taskarr == null) {
-      let data = [newtask];
-      localStorage.setItem("taskname", JSON.stringify(data));
-    } else {
-      taskarr.push(newtask);
-      localStorage.setItem("taskname", JSON.stringify(taskarr));
-    }
+  while (newtask == "") {
+    newtask = prompt("Please enter a vaild task below!");
   }
-  document.getElementById("inputbox").value = "";
+
+  let taskarr = JSON.parse(localStorage.getItem("taskname"));
+  if (taskarr == null) {
+    let data = [newtask];
+    localStorage.setItem("taskname", JSON.stringify(data));
+  } else {
+    taskarr.push(newtask);
+    localStorage.setItem("taskname", JSON.stringify(taskarr));
+  }
+
+  $("inputbox").value = "";
   display();
 }
 
 function display() {
   let taskarr = JSON.parse(localStorage.getItem("taskname"));
   let html = "";
-  let addedtask = document.getElementById("tasks");
+  let addedtask = $("tasks");
   taskarr.forEach((element, i) => {
     html += `<li class="task">
         <input type="checkbox"  onclick = "Checkbox(${i})" id="check">
@@ -42,26 +45,27 @@ function Delete(i) {
 }
 
 function Update(i) {
-  let updateindex = document.getElementById("index");
+  let updateindex = $("index");
   let taskarr = JSON.parse(localStorage.getItem("taskname"));
   updateindex.value = i;
-  document.getElementById("inputbox").value = taskarr[i];
-  document.getElementById("add").style.display = "none";
-  document.getElementById("save").style.display = "block";
+  $("inputbox").value = taskarr[i];
+  $("inputbox").focus();
+  $("add").style.display = "none";
+  $("save").style.display = "block";
 }
 function save() {
   let taskarr = JSON.parse(localStorage.getItem("taskname"));
-  let updateindex = document.getElementById("index").value;
+  let updateindex = $("index").value;
 
-  taskarr[updateindex] = document.getElementById("inputbox").value;
+  taskarr[updateindex] = $("inputbox").value;
   if (taskarr[updateindex] != "") {
     localStorage.setItem("taskname", JSON.stringify(taskarr));
-    document.getElementById("inputbox").value = "";
+    $("inputbox").value = "";
   } else {
     alert("Can't save an empty task!");
   }
-  document.getElementById("save").style.display = "none";
-  document.getElementById("add").style.display = "block";
+  $("save").style.display = "none";
+  $("add").style.display = "block";
 
   display();
 }
@@ -72,7 +76,7 @@ function Clear() {
   display();
 }
 function Checkbox(i) {
-  if (document.getElementById("check").checked == true) {
+  if ($("check").checked == true) {
     alert("TASK COMPLETED!");
     Delete(i);
   }
@@ -81,10 +85,9 @@ function Checkbox(i) {
 // Add or Save on enter key press
 
 function onenter({ key }) {
-  let $ = (selector) => document.querySelector(selector);
   if (key == "Enter") {
-    if ($("#add").style.getPropertyValue("display") == "block")
-      $("#add").click();
-    else $("#save").click();
+    if (getComputedStyle($("add")).getPropertyValue("display") == "block")
+      $("add").click();
+    else $("save").click();
   }
 }

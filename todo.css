@@ -37,7 +37,10 @@ body {
 }
 
 .hoverbox {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  left: -100vw;
   border: 2px solid rgba(22, 4, 4);
   width: 50%;
   height: 50px;
@@ -49,8 +52,10 @@ body {
   margin: 80px 2px 0px 100px;
 }
 
-.titleBox:hover+.hoverbox {
-  display: block;
+.titleBox:hover + .hoverbox {
+  /* display: block; */
+  opacity: 1;
+  position: static;
 }
 
 .taskbox {
@@ -115,7 +120,6 @@ body {
   margin-right: 1%;
   border-width: 3px;
   font-weight: 5px;
-
 }
 
 #add:hover {
@@ -144,14 +148,12 @@ body {
 }
 
 .container2 span {
-
   border-bottom: 3px solid black;
   box-shadow: 0px 3px #ff1f8f, 0px 6px rgb(245, 130, 218);
   padding-bottom: 4px;
   color: #000000;
   margin: auto;
 }
-
 
 .button,
 .buttond {
@@ -275,4 +277,9 @@ label {
 
 #clear:active {
   background-color: beige;
+}
+
+/* Enabling consistent animation smoothness accross all elements */
+* {
+  transition: all 0.3s ease !important;
 }

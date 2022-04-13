@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head >
-    
+  <head>
     <script type="text/javascript" src="todo.js"></script>
     <link href="https://css.gg/css?=|list" rel="stylesheet" />
     <link rel="stylesheet" href="todo.css" />
@@ -14,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body onload="display()">
     <div class="titleBox">
       <p class="title">TO - DO LIST</p>
@@ -23,8 +23,14 @@
     </div>
     <div class="container">
       <div class="taskbox">
-        <i class="gg-list" style="font-size:60px;"></i>
-        <input id="inputbox" type="text" placeholder="Add a task..." onkeydown="onenter()"/>
+        <i class="gg-list" style="font-size: 60px"></i>
+        <input
+          id="inputbox"
+          type="text"
+          placeholder="Add a task..."
+          onkeydown="onenter(event)"
+          autofocus
+        />
         <input type="hidden" id="index" />
         <input type="submit" onclick="onadd()" id="add" value="ADD!" />
         <input
@@ -32,7 +38,7 @@
           onclick="save()"
           id="save"
           value="SAVE!"
-          style="display: none;"
+          style="display: none"
         />
       </div>
       <div class="container2">
