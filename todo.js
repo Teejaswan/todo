@@ -83,3 +83,14 @@ function Checkbox(i){
         Delete(i);
     }
 }
+
+// Add or Save on enter key press
+
+const $ = selector => document.querySelector(selector);
+
+$('#inputbox').onkeydown = ({key}) => {
+    if(key == "Enter") {
+        if($('#add').style.getPropertyValue("display") == "block") $("#add").click()
+        else $("#save").click() 
+    }
+}
