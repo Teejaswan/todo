@@ -8,9 +8,11 @@
   transition: 250ms;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .titleBox:hover {
   transform: translateY(-10px);
 }
+
 .title {
   display: block;
   text-align: center;
@@ -19,10 +21,12 @@
   font-size: 40px;
   color: rgb(247, 247, 247);
 }
+
 body {
   height: 100%;
   background: linear-gradient(rgb(73, 255, 246), rgba(3, 34, 32, 0.75));
 }
+
 .onhover {
   display: block;
   text-align: center;
@@ -31,6 +35,7 @@ body {
   font-weight: 550;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .hoverbox {
   display: none;
   border: 2px solid rgba(22, 4, 4);
@@ -43,9 +48,11 @@ body {
   background-color: rgb(232, 255, 26);
   margin: 80px 2px 0px 100px;
 }
-.titleBox:hover + .hoverbox {
+
+.titleBox:hover+.hoverbox {
   display: block;
 }
+
 .taskbox {
   display: flex;
   height: 100px;
@@ -53,6 +60,7 @@ body {
   margin-left: 10%;
   justify-content: space-between;
 }
+
 .container {
   background-color: rgb(245, 159, 219);
   width: 65%;
@@ -62,6 +70,7 @@ body {
   border: 2px solid black;
   box-shadow: 10px 10px rgba(0, 0, 0);
 }
+
 #inputbox {
   width: 65%;
   height: 40%;
@@ -72,7 +81,8 @@ body {
   border: 2px solid rgb(119, 117, 117);
 }
 
-#add,#save{
+#add,
+#save {
   height: 40px;
   width: 80px;
   margin-top: 65px;
@@ -85,15 +95,19 @@ body {
   transform: rotateY(10%);
   transition: transform 50ms ease-out;
 }
-#add:active{
+
+#add:active {
   background-color: rgb(81, 17, 98);
 }
-#save:active{
+
+#save:active {
   background-color: rgb(81, 17, 98);
 }
-#inputbox{
+
+#inputbox {
   padding-left: 20px;
 }
+
 .gg-list {
   background-color: rgb(73, 255, 246);
   padding: 10px;
@@ -101,16 +115,19 @@ body {
   margin-right: 1%;
   border-width: 3px;
   font-weight: 5px;
- 
+
 }
-#add:hover{
+
+#add:hover {
   cursor: pointer;
   transform: translate(-2px, -2px);
 }
-#save:hover{
+
+#save:hover {
   cursor: pointer;
   transform: translate(-2px, -2px);
 }
+
 .container2 {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: flex;
@@ -125,10 +142,11 @@ body {
   font-weight: bolder;
   box-shadow: 2.5px 4px black;
 }
+
 .container2 span {
-  
+
   border-bottom: 3px solid black;
-  box-shadow: 0px 3px #ff1f8f,0px 6px rgb(245, 130, 218);
+  box-shadow: 0px 3px #ff1f8f, 0px 6px rgb(245, 130, 218);
   padding-bottom: 4px;
   color: #000000;
   margin: auto;
@@ -164,6 +182,7 @@ body {
   padding-right: 8px;
   background-color: rgb(232, 255, 26);
 }
+
 .buttond:active {
   background-color: rgb(106, 117, 4);
   outline: 0;
@@ -177,6 +196,7 @@ body {
 label {
   display: flex;
 }
+
 .task {
   display: flex;
   box-shadow: 0 2px rgb(243, 240, 38), 0 4px black;
@@ -194,9 +214,11 @@ label {
   padding-top: 18px;
   padding-bottom: 40px;
 }
+
 .task input {
   margin-top: 27px;
 }
+
 .task p {
   font-family: cursive;
   font-size: 20px;
@@ -204,10 +226,12 @@ label {
   padding-bottom: 8px;
   padding-right: 10px;
 }
+
 .task:last-child {
   margin-bottom: 60px;
   box-shadow: none;
 }
+
 #check {
   appearance: none;
   background-color: white;
@@ -221,6 +245,7 @@ label {
   display: grid;
   place-content: center;
 }
+
 #check::before {
   content: "";
   width: 0.65em;
@@ -228,12 +253,15 @@ label {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
 }
+
 #check:checked::before {
   transform: scale(1);
 }
+
 #check::before {
   background-color: #fbff22;
 }
+
 #clear {
   height: 60%;
   width: 100px;
@@ -244,6 +272,7 @@ label {
 
   color: white;
 }
+
 #clear:active {
   background-color: beige;
 }

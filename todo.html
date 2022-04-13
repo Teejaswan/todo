@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head onload="display()">
-    <script type ="text/javascript" src="todo.js"></script>
-    <link href="https://css.gg/css?=|list" rel="stylesheet">
-    <link rel="stylesheet" href="todo.css">
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;500&family=Fredoka:wght@300&family=Grape+Nuts&family=Libre+Baskerville&family=Plus+Jakarta+Sans:wght@200&display=swap" rel="stylesheet">
+  <head onload="display()">
+    <script type="text/javascript" src="todo.js"></script>
+    <link href="https://css.gg/css?=|list" rel="stylesheet" />
+    <link rel="stylesheet" href="todo.css" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;500&family=Fredoka:wght@300&family=Grape+Nuts&family=Libre+Baskerville&family=Plus+Jakarta+Sans:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <title>ToDo list</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-<body >
-    <div class = "titleBox">
-        <p class = "title">TO - DO LIST</p>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="titleBox">
+      <p class="title">TO - DO LIST</p>
     </div>
     <div class="hoverbox">
-        <p class ="onhover">Create,Read,Update and Delete your to-do list !</p>
+      <p class="onhover">Create,Read,Update and Delete your to-do list !</p>
     </div>
-    <div class ="container"> 
-    <div class="taskbox" >
+    <div class="container">
+      <div class="taskbox">
         <i class="gg-list" style="font-size:60px;"></i>
-       <input id = "inputbox" type="text" placeholder="Add a task...">
-       <input type ="hidden" id="index">
-       <input type="submit" onclick = "onadd()" id="add" value="ADD!">
-       <input type="submit" onclick = "save()" id = "save" value="SAVE!" style="display: none;">
-    </div>
-    <div class ="container2">
+        <input id="inputbox" type="text" placeholder="Add a task..." />
+        <input type="hidden" id="index" />
+        <input type="submit" onclick="onadd()" id="add" value="ADD!" />
+        <input
+          type="submit"
+          onclick="save()"
+          id="save"
+          value="SAVE!"
+          style="display: none;"
+        />
+      </div>
+      <div class="container2">
         <span class="heading">INCOMPLETE - TASKS</span>
         <button class="button" id="clear" onclick="Clear()">Clear All</button>
+      </div>
+      <div id="tasks"></div>
     </div>
-    <div id="tasks"></div>
-    </div>
-</body>
+  </body>
 </html>
