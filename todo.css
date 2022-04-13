@@ -48,6 +48,10 @@ body {
 }
 .taskbox {
   display: flex;
+  height: 100px;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: space-between;
 }
 .container {
   background-color: rgb(245, 159, 219);
@@ -58,29 +62,56 @@ body {
   border: 2px solid black;
   box-shadow: 10px 10px rgba(0, 0, 0);
 }
-.taskbox {
-  height: 100px;
-}
-.taskbox input {
-  width: 60%;
+#inputbox {
+  width: 65%;
   height: 40%;
   box-shadow: -2px 4px rgb(0, 0, 0);
-  margin: 60px auto 50px 10px;
+  margin-top: 60px;
   border-radius: 30px;
-  border: 2px solid black;
-}
-.inputbox {
-  padding-left: 25px;
   font-size: 20px;
+  border: 2px solid rgb(119, 117, 117);
+}
+
+#add,#save{
+  height: 40px;
+  width: 80px;
+  margin-top: 65px;
+  box-shadow: 5px 5px rgba(0, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(207, 35, 255);
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  transform: rotateY(10%);
+  transition: transform 50ms ease-out;
+}
+#add:active{
+  background-color: rgb(81, 17, 98);
+}
+#save:active{
+  background-color: rgb(81, 17, 98);
+}
+#inputbox{
+  padding-left: 20px;
 }
 .gg-list {
   background-color: rgb(73, 255, 246);
-  padding: 10px 10px 10px 10px;
-  margin: 70px 10px 10px auto;
+  padding: 10px;
+  margin-top: 73px;
+  margin-right: 1%;
   border-width: 3px;
   font-weight: 5px;
+ 
 }
-.filters {
+#add:hover{
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+}
+#save:hover{
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+}
+.container2 {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: flex;
   width: 80%;
@@ -90,24 +121,19 @@ body {
   background-color: rgb(165, 245, 16);
   border: 2px solid black;
   border-radius: 25px;
-  font-weight: 520;
+  font-size: larger;
+  font-weight: bolder;
   box-shadow: 2.5px 4px black;
 }
-.filters span {
-  cursor: pointer;
-  font-size: 12x;
+.container2 span {
+  
+  border-bottom: 3px solid black;
+  box-shadow: 0px 3px #ff1f8f,0px 6px rgb(245, 130, 218);
+  padding-bottom: 4px;
   color: #000000;
-  font-weight: 600;
-  text-shadow: 5px 5px #ff1f8f;
   margin: auto;
 }
-.filters span:hover {
-  font-size: 18px;
-  text-shadow: 5px 5px #1fffff;
-  font-weight: 550;
-  padding-bottom: 1px;
-  border-bottom: 3px solid rgb(14, 255, 255);
-}
+
 
 .button,
 .buttond {
@@ -147,7 +173,7 @@ body {
   transform: translate(-2px, -2px);
 }
 
-.tasks li,
+#tasks li,
 label {
   display: flex;
 }
@@ -182,10 +208,10 @@ label {
   margin-bottom: 60px;
   box-shadow: none;
 }
-.check {
+#check {
   appearance: none;
   background-color: white;
-  margin: 0;
+  margin-top: 30px;
   color: currentColor;
   width: 1.15em;
   height: 1.15em;
@@ -195,17 +221,17 @@ label {
   display: grid;
   place-content: center;
 }
-.check::before {
+#check::before {
   content: "";
   width: 0.65em;
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
 }
-.check:checked::before {
+#check:checked::before {
   transform: scale(1);
 }
-.check::before {
+#check::before {
   background-color: #fbff22;
 }
 #clear {
